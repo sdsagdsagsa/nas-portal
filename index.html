@@ -3,28 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>我的 NAS</title>
+<title>我的 NAS 工具箱</title>
 <style>
-  body{font-family:-apple-system,"Microsoft YaHei",sans-serif;background:#0f172a;color:#e2e8f0;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0}
-  .card{text-align:center;padding:32px;max-width:460px;width:100%}
-  h1{font-size:22px;margin:0 0 8px}
-  p{color:#94a3b8;font-size:14px;line-height:1.6;margin:8px 0}
-  .btns{margin-top:24px;display:flex;flex-direction:column;gap:12px}
-  button{padding:14px 18px;border-radius:10px;font-size:15px;cursor:pointer;border:1px solid #334155}
-  .primary{background:#38bdf8;color:#0f172a;border-color:#38bdf8;font-weight:700}
-  .secondary{background:#1e293b;color:#e2e8f0}
-  .hint{font-size:12px;color:#64748b;margin-top:20px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"Microsoft YaHei",sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh;padding:20px}
+  .wrap{max-width:600px;margin:0 auto}
+  h1{font-size:24px;text-align:center;margin:20px 0 6px}
+  .sub{text-align:center;color:#64748b;font-size:13px;margin-bottom:28px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  a{text-decoration:none;color:inherit}
+  .card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:18px;transition:transform .15s,border-color .15s;cursor:pointer}
+  .card:active{transform:scale(.97)}
+  .card:hover{border-color:#38bdf8}
+  .icon{font-size:28px;margin-bottom:10px}
+  .name{font-size:15px;font-weight:600;margin-bottom:4px}
+  .desc{font-size:12px;color:#94a3b8}
+  .primary{background:#38bdf8;color:#0f172a;border-color:#38bdf8}
+  .primary .desc{color:#0c4a6e}
+  .section{font-size:13px;color:#64748b;margin:24px 0 10px;padding-left:4px}
 </style>
 </head>
 <body>
-<div class="card">
-  <h1>我的 NAS</h1>
-  <p>选一个入口进入：</p>
-  <div class="btns">
-    <a href="http://192.168.0.100:5244" style="text-decoration:none"><button class="primary" style="width:100%">在家连WiFi · 高速局域网</button></a>
-    <a href="http://ht.wwszxc.tax:40374" style="text-decoration:none"><button class="secondary" style="width:100%">出门用流量 · 公网穿透</button></a>
+<div class="wrap">
+  <h1>🛠️ NAS 工具箱</h1>
+  <p class="sub">点一下直接跳转</p>
+
+  <div class="section">📁 文件存储</div>
+  <div class="grid">
+    <a href="http://192.168.0.100:5244"><div class="card primary">
+      <div class="icon">🏠</div>
+      <div class="name">在家用 NAS</div>
+      <div class="desc">高速局域网入口</div>
+    </div></a>
+    <a href="http://ht.wwszxc.tax:40374"><div class="card">
+      <div class="icon">🌍</div>
+      <div class="name">出门用 NAS</div>
+      <div class="desc">公网穿透 3MB/s</div>
+    </div></a>
   </div>
-  <p class="hint">在家连WiFi选第一个（快），出门用流量选第二个</p>
+
+  <div class="section">💻 远程控制</div>
+  <div class="grid">
+    <a href="rdp://ht.wwszxc.tax:40375"><div class="card">
+      <div class="icon">🖥️</div>
+      <div class="name">远程桌面</div>
+      <div class="desc">控制家里电脑</div>
+    </div></a>
+    <a href="http://ht.wwszxc.tax:40374"><div class="card">
+      <div class="icon">📂</div>
+      <div class="name">文件管理</div>
+      <div class="desc">上传下载文件</div>
+    </div></a>
+  </div>
+
+  <div class="section">🎬 娱乐</div>
+  <div class="grid">
+    <a href="http://ht.wwszxc.tax:40374"><div class="card">
+      <div class="icon">🎬</div>
+      <div class="name">在线视频</div>
+      <div class="desc">在文件里点视频</div>
+    </div></a>
+    <a href="http://ht.wwszxc.tax:40374"><div class="card">
+      <div class="icon">📷</div>
+      <div class="name">照片备份</div>
+      <div class="desc">查看上传的照片</div>
+    </div></a>
+  </div>
+
+  <div class="section">⚙️ 系统</div>
+  <div class="grid">
+    <a href="http://ht.wwszxc.tax:40374/@manage"><div class="card">
+      <div class="icon">🔧</div>
+      <div class="name">NAS管理后台</div>
+      <div class="desc">Alist设置</div>
+    </div></a>
+    <a href="http://www.ltwssxc.tax:40373"><div class="card">
+      <div class="icon">📊</div>
+      <div class="name">穿透面板</div>
+      <div class="desc">frp隧道状态</div>
+    </div></a>
+  </div>
+
+  <p class="sub" style="margin-top:30px">下次添加新工具会更新在这里</p>
 </div>
 </body>
 </html>
